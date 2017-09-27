@@ -1,0 +1,934 @@
+[
+	{
+		"id": "s_5858",
+		"scheduleId": "5858",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-08-21 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-04 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 수강신청 변경",
+		"permissions": "R",
+        "keyword": "수강신청, 수강, 변경, 정정",	
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5861",
+		"scheduleId": "5861",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-08-28 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-08-30 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사과정 가을학기 학점인정시험 신청",
+		"permissions": "R",
+	    "keyword": "학점인정, 학점, 인정, 신청",	
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5860",
+		"scheduleId": "5860",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-08-28 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-08-28 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 개강",
+		"permissions": "R",
+        "keyword": "개강", 
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5863",
+		"scheduleId": "5863",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-08-28 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-08 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사과정 Honor Program 신청 마감",
+		"permissions": "R",
+        "keyword": "HP, Honor Program, 어너 프로그램, 신청",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5862",
+		"scheduleId": "5862",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-08-28 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-08 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학/석사과정 부전공 및 학사과정 복수전공/심화전공/자유융합전공 신청 마감",
+		"permissions": "R",
+        "keyword": "부전공, 복수전공, 심화전공, 자유융합전공, 신청",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5865",
+		"scheduleId": "5865",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-08-31 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-04 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사과정 가을학기 학점인정시험",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5866",
+		"scheduleId": "5866",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-09-04 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-04 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 수강신청 변경 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5868",
+		"scheduleId": "5868",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-09-05 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-10-27 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사 2007, 2008 학번 및 석·박사 2008 이전 학번 가을학기 수강신청 취소",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5867",
+		"scheduleId": "5867",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-09-05 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-10-13 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사 2006 이전 학번 및 학·석·박사 2009 이후 학번 가을학기 수강신청 취소",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5870",
+		"scheduleId": "5870",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-09-22 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-22 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사과정 조기졸업 신청 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5869",
+		"scheduleId": "5869",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-09-22 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-22 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학/석사과정 부전공 및 학사과정 복수전공/심화전공/자유융합전공 취소 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5871",
+		"scheduleId": "5871",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-09-22 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-09-23 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "POSTECH - KAIST 학생대제전 (연습반 휴강)",
+		"permissions": "R",
+        "keyword": "카포전, 포카전",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5872",
+		"scheduleId": "5872",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-10-03 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-10-06 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "추석연휴 (10.6 공휴일 대체휴일)",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5873",
+		"scheduleId": "5873",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-10-10 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-10-14 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 중간 강의평가",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_6185",
+		"scheduleId": "6185",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-10-10 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-10-16 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학부생과 지도교수와의 만남의 주간",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5874",
+		"scheduleId": "5874",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-10-16 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-10-20 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 중간고사",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5875",
+		"scheduleId": "5875",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-01 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-11-07 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학과장과 랩대표와의 만남의 주간",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5878",
+		"scheduleId": "5878",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-03 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-11-03 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "2018학년도 가을학기 전공교과목 개설(안) 초안 제출 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5876",
+		"scheduleId": "5876",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-03 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-11-03 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "2018학년도 봄학기 교양/기초/전공과목 개설(안) 제출 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5877",
+		"scheduleId": "5877",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-03 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-11-03 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "2017학년도 겨울학기 교과목 개설(안) 제출 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5879",
+		"scheduleId": "5879",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-07 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-11-08 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학생문화제",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5880",
+		"scheduleId": "5880",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-20 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-11-22 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 수강신청",
+		"permissions": "R",
+        "keyword": "계절, 계절학기",
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5881",
+		"scheduleId": "5881",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-27 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-08 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 강의평가",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5882",
+		"scheduleId": "5882",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-27 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-08 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사과정 학과신청",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5883",
+		"scheduleId": "5883",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-11-30 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-11-30 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학·석사학위 청구논문 제출마감 (2018.2월 졸업자)",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5885",
+		"scheduleId": "5885",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-12-11 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-15 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 학기말 시험",
+		"permissions": "R",
+        "keyword": "기말, 기말고사",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5886",
+		"scheduleId": "5886",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-12-15 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-15 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 종강",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5888",
+		"scheduleId": "5888",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-12-18 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-26 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 수강신청 변경",
+		"permissions": "R",
+        "keyword": "계절, 계절학기, 정정",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5887",
+		"scheduleId": "5887",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-12-18 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-18 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 개강",
+		"permissions": "R",
+        "keyword": "계절, 계절학기",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5890",
+		"scheduleId": "5890",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-12-26 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-26 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "가을학기 성적입력 마감",
+		"permissions": "R",
+        "keyword": "학점, 나와",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5891",
+		"scheduleId": "5891",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-12-27 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-01-02 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 수강신청 취소",
+		"permissions": "R",
+        "keyword": "계절, 계절학기",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5892",
+		"scheduleId": "5892",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2017-12-29 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2017-12-29 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학·석사학위 논문심사 개최마감 (2018.2월 졸업자)",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5893",
+		"scheduleId": "5893",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-01-02 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-01-02 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 수강신청 취소 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5894",
+		"scheduleId": "5894",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-01-03 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-01-09 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "봄학기 각 과정 수강신청 및 복학(대상)자 수강신청",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5895",
+		"scheduleId": "5895",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-01-15 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-01-19 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 강의 평가",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5896",
+		"scheduleId": "5896",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-01-26 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-01-26 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 종강",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5897",
+		"scheduleId": "5897",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-01-29 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-02-02 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "봄학기 각 과정 복학신청 및 전과신청",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5898",
+		"scheduleId": "5898",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-01-31 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-01-31 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "겨울학기 성적입력 마감",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5899",
+		"scheduleId": "5899",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-02-12 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-02-20 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "2018학년도 봄학기 각 과정 재학생 등록 (납입금 납부) 기간",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5900",
+		"scheduleId": "5900",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-02-19 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-03-05 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "봄학기 수강신청 변경",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5901",
+		"scheduleId": "5901",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-02-20 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-02-23 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사과정 봄학기 입학생 오리엔테이션 및 봉사연수",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5902",
+		"scheduleId": "5902",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-02-23 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-02-23 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "2017학년도 학위수여식",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5905",
+		"scheduleId": "5905",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-02-26 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-02-26 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "학사과정 입학식",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	} ,
+
+	{
+		"id": "s_5903",
+		"scheduleId": "5903",
+		"calendarId": "1",
+		"allDay": true,
+		"start": "2018-02-26 00:00:00.0",
+		"startTime": "12:00",
+		"end": "2018-02-26 00:00:00.0",
+		"endTime": "12:00",
+		"langKnd": "ko",
+		"title": "봄학기 개강",
+		"permissions": "R",
+		
+		"editable": false, 
+		
+		"textColor": "",
+		"borderColor": "rgb(100, 194, 9)",
+		"backgroundColor": "rgb(100, 194, 9)",
+		"isJoint": ""
+	}
+]
