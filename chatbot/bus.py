@@ -1,23 +1,34 @@
+# coding=utf-8
+
 import json
 from datetime import datetime, timedelta
+import os
 
-DATA_PATH = "busdata"
-DATA_FILE = "buses"
-datas = []
+BUS_DATA_PATH = "busdata"
+BUS_DATA_FILE = "buses"
 
-def initializeBus():
-    global datas
-    f = open(DATA_PATH + "/" + DATA_FILE, "r")
+# def initializeBus():
+#     global datas
+#     f = open(BUS_DATA_PATH + "/" + BUS_DATA_FILE, "r")
+#     datas = list(map(lambda s: parseFile(s.replace("\n", "")), f.readlines()))
+#     f.close()
+
+def readBusData():
+    scriptDir = os.path.dirname(__file__)
+    path = os.path.join(scriptDir, BUS_DATA_PATH, BUS_DATA_FILE)
+    f = open(path, "r")
     datas = list(map(lambda s: parseFile(s.replace("\n", "")), f.readlines()))
     f.close()
+    return datas
 
 def bus(st):
+    datas = readBusData()
     nst = normalize(st)
     return "\n".join(filter(lambda s: len(s) > 0, map(lambda d: respond(nst, d), datas)))
 
 def respond(st, data):
     if hasKey(st, data["keys"]):
-        name = data["name"]
+        name = data["name"].encode("utf8")
         now = datetime.now()
         departures = list(filter(lambda s: len(s) > 0, map(lambda d: nextDeparture(st, now, name, data["times"], d), data["stops"])))
         if len(departures) > 0:
@@ -30,7 +41,7 @@ def respond(st, data):
 def nextDeparture(st, now, name, times, data):
     if hasKey(st, data["keys"]):
         dt = timedelta(minutes = data["time"])
-        stop = data["name"]
+        stop = data["name"].encode("utf8")
         departure = list(filter(lambda t: t > now, map(lambda l: datetime(now.year, now.month, now.day, hour = l[0], minute = l[1]) + dt, times)))
         if len(departure) > 0:
             t = departure[0]
@@ -44,7 +55,9 @@ def hasKey(st, keys):
     return len(list(filter(lambda k: k in st, keys))) > 0
 
 def parseFile(name):
-    f = open(DATA_PATH + "/" + name, "r")
+    scriptDir = os.path.dirname(__file__)
+    path = os.path.join(scriptDir, BUS_DATA_PATH, name)
+    f = open(path, "r")
     data = json.loads(f.read())
     f.close()
     return data

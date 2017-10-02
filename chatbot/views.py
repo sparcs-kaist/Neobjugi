@@ -8,6 +8,7 @@ from rest_framework import status
 import pprint
 import json
 from chatbot.schedule import scheduler
+from chatbot.bus import bus
 
 PAGE_ACCESS_TOKEN = "EAAB3WIrhIvQBACM7e0UnCrz6Mb800BBzsZALw4eUlXOIuZADxtvnvKs9xLMrzKI0cP3p01JRpBkuHpCaQuNVlqlbKqeLi2dcJC0FrlG0h32tBJhkLW2f1iVufRs8DLtxmHnydqwwZBDGuoLZC4acCnLscZAfBXe8vlJQzh2V70YpckUjvlq3P"
 VERIFY_TOKEN = "2318934571"
@@ -59,7 +60,15 @@ def post_facebook_message(fbid, recevied_message):
 def post_facebook_message(fbid, received_message):           
     print(fbid, received_message)
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token={}'.format(PAGE_ACCESS_TOKEN) 
-    msg = scheduler(received_message)
+    msg = ""
+    try:
+        msg += scheduler(received_message)
+    except:
+        print("error during applying scheduler function")
+    try:
+        msg += bus(received_message)
+    except:
+        print("error during applying bus function")
     print(msg)
     response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":msg}})
     status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
