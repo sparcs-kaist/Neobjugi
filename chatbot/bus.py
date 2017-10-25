@@ -1,5 +1,3 @@
-# coding=utf-8
-
 import json
 from datetime import datetime, timedelta
 import os
@@ -28,7 +26,7 @@ def bus(st):
 
 def respond(st, data):
     if hasKey(st, data["keys"]):
-        name = data["name"].encode("utf8")
+        name = data["name"]
         now = datetime.now()
         departures = list(filter(lambda s: len(s) > 0, map(lambda d: nextDeparture(st, now, name, data["times"], d), data["stops"])))
         if len(departures) > 0:
@@ -41,7 +39,7 @@ def respond(st, data):
 def nextDeparture(st, now, name, times, data):
     if hasKey(st, data["keys"]):
         dt = timedelta(minutes = data["time"])
-        stop = data["name"].encode("utf8")
+        stop = data["name"]
         departure = list(filter(lambda t: t > now, map(lambda l: datetime(now.year, now.month, now.day, hour = l[0], minute = l[1]) + dt, times)))
         if len(departure) > 0:
             t = departure[0]
