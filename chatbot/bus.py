@@ -88,4 +88,4 @@ def normalize(st):
 def addJosa(st):
     return st + ("은" if (ord(st[-1]) - 44032) % 28 else "는")
 
-print(bus(input(), datetime.now() + timedelta(hours=int(input()))))
+# print(bus(input(), datetime.now() + timedelta(hours=int(input()))))
