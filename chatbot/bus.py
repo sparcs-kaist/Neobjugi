@@ -5,6 +5,13 @@ import os
 BUS_DATA_PATH = "busdata"
 BUS_DATA_FILE = "buses"
 
+TIME_STRING = "%H시 %M분"
+ERR_STOP_STRING = "의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요."
+ERR_TIME_STRING = "{} 오늘 더이상 {}에 오지 않습니다."
+ARRIVAL_STRING = "{} {}에 {}에 도착할 예정입니다."
+DEPARTURE_STRING = "{} {}에 {}에서 출발할 예정입니다."
+OMITTING_STRING = "..."
+
 # def initializeBus():
 #     global datas
 #     f = open(BUS_DATA_PATH + "/" + BUS_DATA_FILE, "r")
@@ -35,7 +42,7 @@ def respondForBus(msg, now, bus):
         if len(responses) > 0:
             return "\n".join(responses)
         else:
-            return busName + "의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요."
+            return busName + ERR_STOP_STRING
     else:
         return ""
 
@@ -47,7 +54,7 @@ def respondForStop(msg, now, busName, times, stop):
         def f(x):
             dt = timedelta(minutes = stopTime[x[0]])
             availables = list(filter(lambda t: t >= now, map(lambda l: datetime(now.year, now.month, now.day, hour = l[0], minute = l[1]) + dt, times)))
-            availableString = ", ".join(map(lambda t: t.strftime("%H시 %M분"), availables[0:3])) + ("..." if len(availables) > 3 else "")
+            availableString = ", ".join(map(lambda t: t.strftime(TIME_STRING), availables[0:3])) + (OMITTING_STRING if len(availables) > 3 else "")
             if len(availables) > 0:
                 return x[1].format(addJosa(busName), availableString, stopName)
             else:
@@ -59,7 +66,7 @@ def respondForStop(msg, now, busName, times, stop):
                 f,
                 filter(
                     lambda x: x[0] in stopTime,
-                    [("arrival", "{} {}에 {}에 도착할 예정입니다."), ("departure", "{} {}에 {}에서 출발할 예정입니다.")]
+                    [("arrival", ARRIVAL_STRING), ("departure", DEPARTURE_STRING)]
                 )
             )
         ))
@@ -67,7 +74,7 @@ def respondForStop(msg, now, busName, times, stop):
         if len(results) > 0:
             return "\n".join(results)
         else:
-            return "{} 오늘 더이상 {}에 오지 않습니다.".format(addJosa(busName), stopName)
+            return ERR_TIME_STRING.format(addJosa(busName), stopName)
     else:
         return ""
 
@@ -88,4 +95,4 @@ def normalize(st):
 def addJosa(st):
     return st + ("은" if (ord(st[-1]) - 44032) % 28 else "는")
 
-# print(bus(input(), datetime.now() + timedelta(hours=int(input()))))
+#print(bus(input(), datetime.now() + timedelta(hours=int(input()))))
