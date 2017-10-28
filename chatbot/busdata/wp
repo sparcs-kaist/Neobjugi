@@ -1,0 +1,15 @@
+{
+    "name": "월평 셔틀",
+    "times": [[9, 5], [10, 5], [11, 5], [13, 5], [14, 5], [15, 5], [16, 5], [17, 5]],
+    "keys": ["월평", "시내"],
+    "stops": [
+        {"time": {"arrival": 40, "departure": 0}, "name": "대강당", "keys": ["강당"]},
+        {"time": {"arrival": 39, "departure": 2}, "name": "본관", "keys": ["본관"]},
+        {"time": {"arrival": 38, "departure": 4}, "name": "오리연못", "keys": ["오리", "연못"]},
+        {"time": {"arrival": 10}, "name": "충남대학교", "keys": ["충"]},
+        {"time": {"arrival": 15}, "name": "월평역(시내방향)", "keys": ["역"]},
+        {"time": {"arrival": 20}, "name": "갤러리아", "keys": ["갤", "겔", "타임", "월드", "둔산"]},
+        {"time": {"arrival": 27}, "name": "정부청사", "keys": ["정부", "청사", "터미널", "시외"]},
+        {"time": {"arrival": 35}, "name": "월평역(학교방향)", "keys": ["역"]}
+    ]
+}
