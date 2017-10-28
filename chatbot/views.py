@@ -11,6 +11,7 @@ from chatbot.schedule import scheduler
 from chatbot.ara import AraChatbot
 import chatbot.credentials as credit 
 from chatbot.bus import bus
+from chatbot.models import User
 
 PAGE_ACCESS_TOKEN = "EAAB3WIrhIvQBACM7e0UnCrz6Mb800BBzsZALw4eUlXOIuZADxtvnvKs9xLMrzKI0cP3p01JRpBkuHpCaQuNVlqlbKqeLi2dcJC0FrlG0h32tBJhkLW2f1iVufRs8DLtxmHnydqwwZBDGuoLZC4acCnLscZAfBXe8vlJQzh2V70YpckUjvlq3P"
 VERIFY_TOKEN = "2318934571"
@@ -65,8 +66,12 @@ class ChatView(APIView):
                         # Print the message to the terminal
                         # Assuming the sender only sends text. Non-text messages like stickers, audio, pictures
                         # are sent as attachments and must be handled accordingly. 
-                        msg += message['message']['text']
-                        post_facebook_message(message['sender']['id'], message['message']['text'])  
+                        post_facebook_message(message['sender']['id'], message['message']['text'])
+                        if User.objects.get(fid=message['sender']['id']) is None:
+                            usr = User.objects.create(fid=message['sender']['id'], cxt=None)
+                            usr.save()
+
+
         except:
             pass
         return HttpResponse()    
