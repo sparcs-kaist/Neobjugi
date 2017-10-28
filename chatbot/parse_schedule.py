@@ -22,11 +22,26 @@ if __name__ == '__main__':
         end = [int(e) for e in end.split('-')]
         event['end'] = end 
         keyword = []
+        musthave = []
         try:
             keyword = el['keyword'].split(',')
+            for i in range(len(keyword)):
+                key = keyword[i]
+                if len(key) == 1:
+                    continue
+                elif key[0] == ' ':
+                    key = key[1:]
+                elif key[-1] == ' ':
+                    key = key[:-1]
+                keyword[i] = key
+        except:
+            pass
+        try:
+            musthave = el['musthave'].split(',')
         except:
             pass
         event['keyword'] = keyword
+        event['musthave'] = musthave
         cal.append(event)
         print(event)
     pickle.dump( cal, open( "schedule.p", "wb" ) )

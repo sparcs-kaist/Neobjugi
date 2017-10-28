@@ -34,6 +34,8 @@ def post_facebook_message(fbid, received_message):
         print("error during applying bus function")
 
     print(msg)
+    if len(msg) == 0:
+        msg = received_message
     response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":msg}})
     status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
     print(response_msg)
@@ -54,6 +56,7 @@ class ChatView(APIView):
             # Facebook recommends going through every entry since they might send
             # multiple messages in a single call during high load
             for entry in incoming_message['entry']:
+                msg = ""
                 for message in entry['messaging']:
                     # Check to make sure the received call is a message call
                     # This might be delivery, optin, postback for other events 
@@ -62,6 +65,7 @@ class ChatView(APIView):
                         # Print the message to the terminal
                         # Assuming the sender only sends text. Non-text messages like stickers, audio, pictures
                         # are sent as attachments and must be handled accordingly. 
+                        msg += message['message']['text']
                         post_facebook_message(message['sender']['id'], message['message']['text'])  
         except:
             pass

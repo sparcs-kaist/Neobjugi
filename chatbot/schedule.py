@@ -9,19 +9,29 @@ from django.conf import settings
 
 start_key = ['시작', '열', '오픈', '부터']
 end_key = ['마감', '끝', '까지']
+stop_words = ['함', '해', '혀', '해요', '합니까', '할까요', '하나요', '합니까요', '하는데', '하냐']
+punctuations = ',.?!\"\'@#$%^&*()'
 pickle_file = os.path.join(settings.PROJECT_ROOT, '../chatbot/schedule.p')
+default_response = '일치하는 일정이 없습니다'
 
 def scheduler(msg):
     msg = msg.encode('utf8').decode('utf8')
     print(msg)
-    print(pickle_file)
+    for sw in stop_words:
+       msg = re.sub(sw, '', msg)
+    print(msg)
+        
+    for ps in punctuations:
+       msg = msg.rstrip(punctuations)
+    print(msg)
+
     schedule = pickle.load(open(pickle_file, "rb"))
     msg = msg.rstrip('\n')
-    re.sub('은 ', ' ', msg)
-    re.sub('는 ', ' ', msg)
-    re.sub('이 ', ' ', msg)
+    msg = re.sub('은 ', ' ', msg)
+    msg = re.sub('는 ', ' ', msg)
+    msg = re.sub('이 ', ' ', msg)
     if not '평가 ' in msg:
-        re.sub('가 ', ' ', msg)
+        msg = re.sub('가 ', ' ', msg)
 
     sf = False
     ef = False
@@ -41,7 +51,7 @@ def scheduler(msg):
     for msg_el in msg_list:
         keyword_list += msg_el.split(' ') 
 
-    selected = [('fuck off', 100000)]
+    selected = [(default_response, -1)]
     
     print(keyword_list)
 
@@ -49,17 +59,24 @@ def scheduler(msg):
         title = sch['title']
         sch_keyword = sch['keyword'] + title.split(' ')
         count = 0
+        musthave = False
+        if len(sch['musthave']) == 0:
+            musthave = True
         for key in keyword_list:
             if key in sch_keyword:
                 count += 1
+            if not musthave:
+                for mh in sch['musthave']:
+                    if mh in key:
+                        musthave = True
         
-        if count > 0:
+        if count > 0 and musthave:
             selected.append((sch, count))
          
     print(selected)
     selected.sort(key = lambda tup: tup[1])
-    selected_sch, _ = selected[0]
-    if selected_sch == 'fuck off':
+    selected_sch, _ = selected[-1]
+    if selected_sch == default_response:
         return selected_sch 
     s_title = selected_sch['title']
     s_start = selected_sch['start']

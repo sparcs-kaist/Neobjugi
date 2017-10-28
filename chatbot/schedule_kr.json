@@ -288,6 +288,7 @@
 		"langKnd": "ko",
 		"title": "가을학기 중간 강의평가",
 		"permissions": "R",
+        "musthave": "평가",
 		
 		"editable": false, 
 		
@@ -330,6 +331,7 @@
 		"langKnd": "ko",
 		"title": "가을학기 중간고사",
 		"permissions": "R",
+        "keyword": "중간, 시험, midterm, exam",
 		
 		"editable": false, 
 		
@@ -562,6 +564,7 @@
 		"langKnd": "ko",
 		"title": "가을학기 종강",
 		"permissions": "R",
+        "keyword": "방학, 겨울방학, 시작",
 		
 		"editable": false, 
 		
@@ -923,6 +926,7 @@
 		"langKnd": "ko",
 		"title": "봄학기 개강",
 		"permissions": "R",
+        "keyword": "방학, 겨울방학, 끝",
 		
 		"editable": false, 
 		
