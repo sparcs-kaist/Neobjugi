@@ -1,0 +1,11 @@
+{
+    "name": "본원-문지 셔틀(주중점심)",
+    "times": [[12, 10]],
+    "keys": ["문지"],
+    "stops": [
+        {"time": {"arrival": 70, "departure": 0}, "name": "문지", "keys": ["문지"]},
+        {"time": {"arrival": 4}, "name": "로덴하우스 앞", "keys": ["로덴"]},
+        {"time": {"arrival": 20, "departure": 50}, "name": "본원", "keys": ["본", "오리", "연못", "강당"]},
+        {"time": {"arrival": 65}, "name": "교수아파트 앞", "keys": ["교수", "아파트"]}
+    ]
+}

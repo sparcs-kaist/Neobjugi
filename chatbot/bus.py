@@ -5,8 +5,11 @@ import os
 BUS_DATA_PATH = "busdata"
 BUS_DATA_FILE = "buses"
 
+TEST_STRING = "testbus"
+TEST_HELP = "Please send your test string with POSIX time, which can be obtained from https://www.epochconverter.com/"
+
 TIME_STRING = "%H시 %M분"
-ERR_STOP_STRING = "의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요."
+ERR_STOP_STRING = "{0}의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요. {0}는 {1}에 갑니다."
 ERR_TIME_STRING = "{} 오늘 더이상 {}에 오지 않습니다."
 ARRIVAL_STRING = "{} {}에 {}에 도착할 예정입니다."
 DEPARTURE_STRING = "{} {}에 {}에서 출발할 예정입니다."
@@ -29,6 +32,11 @@ def readBusData():
 def bus(msg, now = datetime.now()):
     datas = readBusData()
     nmsg = normalize(msg)
+
+    res = parseTest(msg, now)
+    if not res:
+        return TEST_HELP
+    msg, now = res
     return "\n".join(filter(lambda s: len(s) > 0, map(lambda bus: respondForBus(nmsg, now, bus), datas)))
 
 def respondForBus(msg, now, bus):
@@ -42,7 +50,7 @@ def respondForBus(msg, now, bus):
         if len(responses) > 0:
             return "\n".join(responses)
         else:
-            return busName + ERR_STOP_STRING
+            return ERR_STOP_STRING.format(busName, ", ".join(map(lambda stop: stop["name"], stops)))
     else:
         return ""
 
@@ -95,4 +103,14 @@ def normalize(st):
 def addJosa(st):
     return st + ("은" if (ord(st[-1]) - 44032) % 28 else "는")
 
-#print(bus(input(), datetime.now() + timedelta(hours=int(input()))))
+def parseTest(msg, now):
+    if not msg.startswith(TEST_STRING):
+        return (msg, now)
+
+    msg = msg[len(TEST_STRING):]
+    try:
+        return (msg[10:], datetime.fromtimestamp(int(msg[0:10])))
+    except:
+        return None
+
+#print(bus(input()))
