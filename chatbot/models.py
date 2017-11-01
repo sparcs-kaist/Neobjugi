@@ -1,8 +1,7 @@
 from django.db import models
 
-# Create your models here.
 
-class User(models.Model):
-	fid = models.CharField(max_length=20)
-	cxt = models.CharField(max_length=100)
-
+class Account(models.Model):
+    fbid = models.CharField(max_length=100)
+    context = models.CharField(max_length=100)
+    status = models.IntegerField(default = -1)
