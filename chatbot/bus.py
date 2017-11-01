@@ -9,7 +9,7 @@ TEST_STRING = "testbus"
 TEST_HELP = "Please send your test string with POSIX time, which can be obtained from https://www.epochconverter.com/"
 
 TIME_STRING = "%H시 %M분"
-ERR_STOP_STRING = "의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요."
+ERR_STOP_STRING = "{0}의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요. {0}는 {1}에 갑니다."
 ERR_TIME_STRING = "{} 오늘 더이상 {}에 오지 않습니다."
 ARRIVAL_STRING = "{} {}에 {}에 도착할 예정입니다."
 DEPARTURE_STRING = "{} {}에 {}에서 출발할 예정입니다."
@@ -50,7 +50,7 @@ def respondForBus(msg, now, bus):
         if len(responses) > 0:
             return "\n".join(responses)
         else:
-            return busName + ERR_STOP_STRING
+            return ERR_STOP_STRING.format(busName, ", ".join(map(lambda stop: stop["name"], stops)))
     else:
         return ""
 
