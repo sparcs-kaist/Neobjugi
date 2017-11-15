@@ -9,8 +9,9 @@ TEST_STRING = "testbus"
 TEST_HELP = "Please send your test string with POSIX time, which can be obtained from https://www.epochconverter.com/"
 
 TIME_STRING = "%H시 %M분"
-ERR_STOP_STRING = "{0}의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요. {0}는 {1}에 갑니다."
+ERR_STOP_STRING = "{}의 도착 시간을 알고 싶은 정류장의 이름을 정확히 말씀해주세요. {} {}에 갑니다."
 ERR_TIME_STRING = "{} 오늘 더이상 {}에 오지 않습니다."
+ERR_DAY_STRING = "{} 오늘 운행하지 않습니다."
 ARRIVAL_STRING = "{} {}에 {}에 도착할 예정입니다."
 DEPARTURE_STRING = "{} {}에 {}에서 출발할 예정입니다."
 OMITTING_STRING = "..."
@@ -40,21 +41,27 @@ def bus(msg, now = datetime.now()):
     return "\n".join(filter(lambda s: len(s) > 0, map(lambda bus: respondForBus(nmsg, now, bus), datas)))
 
 def respondForBus(msg, now, bus):
-    if hasKey(msg, bus["keys"]):
+    nmsg = hasKey(msg, bus["keys"])
+    if nmsg:
         busName = bus["name"]
+        today = now.weekday() - (1 if now.hour < 4 else 0)
+        if today not in bus["day"]:
+            return ERR_DAY_STRING.format(addJosa(busName)) if bus["errday"] else ""
+
+        errTime = bus["errtime"]
         busTime = bus["times"]
         stops = bus["stops"]
 
-        responses = list(filter(lambda s: len(s) > 0, map(lambda stop: respondForStop(msg, now, busName, busTime, stop), stops)))
+        responses = list(filter(lambda s: len(s) > 0, map(lambda stop: respondForStop(nmsg, now, busName, errTime, busTime, stop), stops)))
 
         if len(responses) > 0:
             return "\n".join(responses)
         else:
-            return ERR_STOP_STRING.format(busName, ", ".join(map(lambda stop: stop["name"], stops)))
+            return ERR_STOP_STRING.format(busName, addJosa(busName), ", ".join(map(lambda stop: stop["name"], stops)))
     else:
         return ""
 
-def respondForStop(msg, now, busName, times, stop):
+def respondForStop(msg, now, busName, errTime, times, stop):
     if hasKey(msg, stop["keys"]):
         stopTime = stop["time"]
         stopName = stop["name"]
@@ -82,12 +89,16 @@ def respondForStop(msg, now, busName, times, stop):
         if len(results) > 0:
             return "\n".join(results)
         else:
-            return ERR_TIME_STRING.format(addJosa(busName), stopName)
+            return ERR_TIME_STRING.format(addJosa(busName), stopName) if errTime else ""
     else:
         return ""
 
 def hasKey(st, keys):
-    return len(list(filter(lambda k: k in st, keys))) > 0
+    filtered = list(filter(lambda k: k in st, keys))
+    if len(filtered) > 0:
+        return st.replace(filtered[0], "b", 1)
+    else:
+        return None
 
 def parseFile(name):
     scriptDir = os.path.dirname(__file__)
@@ -101,7 +112,7 @@ def normalize(st):
     return st.replace(" ", "").replace("\t", "").replace("\n", "").lower()
 
 def addJosa(st):
-    return st + ("은" if (ord(st[-1]) - 44032) % 28 else "는")
+    return st + ("은" if ((ord(st[-1]) - 44032) % 28) else "는")
 
 def parseTest(msg, now):
     if not msg.startswith(TEST_STRING):

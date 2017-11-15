@@ -1,5 +1,8 @@
 {
-    "name": "본원-문지 셔틀(주중점심)",
+    "name": "본원-문지 점심셔틀",
+    "day": [0, 1, 2, 3, 4],
+    "errtime": false,
+    "errday": false,
     "times": [[12, 10]],
     "keys": ["문지"],
     "stops": [
