@@ -12,7 +12,7 @@ end_key = ['마감', '끝', '까지']
 stop_words = ['함', '해', '혀', '해요', '합니까', '할까요', '하나요', '합니까요', '하는데', '하냐']
 punctuations = ',.?!\"\'@#$%^&*()'
 pickle_file = os.path.join(settings.PROJECT_ROOT, '../chatbot/schedule.p')
-default_response = '일치하는 일정이 없습니다'
+default_response = '일치하는 일정이 없습니다. 궁금하신 학사일정 키워드를 입력해주세요.'
 
 def scheduler(msg):
     msg = msg.encode('utf8').decode('utf8')

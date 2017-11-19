@@ -34,7 +34,7 @@ class Session(object):
 
             # Bus chatbot does something
 
-            res = '버스 쳇봇입니다.'
+            res = '버스 쳇봇입니다. 도착시간이 궁금한 버스 이름과 정류장 이름을 함께 적어주세요.'
 
             if user_id in self.user_history.keys():
                 res += '\n\n아라 쳇봇 대화 기록은 초기화 되었습니다.'

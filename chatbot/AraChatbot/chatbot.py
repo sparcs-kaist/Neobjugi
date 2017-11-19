@@ -7,7 +7,7 @@ class AraChatbot(object):
     def __init__(self):
         self.recent_words = ['최근', '근황']
         self.accept_words = ['네', '어', 'ㅇ', 'ㅇㅇ', 'y', 'yes']
-        self.decline_words = ['아니요', '아니', 'ㄴ', 'ㄴㄴ', 'n', 'no']
+        self.decline_words = ['아니요', '아니', 'ㄴ', 'ㄴㄴ', 'n', 'no', '아니오']
         self.filter_words = ['판매완료', '마감', '완료', 'deleted']
         self.contents = self.read_file(result_path)
 
@@ -86,7 +86,7 @@ class AraChatbot(object):
 
             else:
 
-                return '다시 입력해주세요.'
+                return '\'네\' 또는 \'아니오\'로 대답해 주세요.'
 
         elif status is 2:
 
@@ -134,4 +134,5 @@ class AraChatbot(object):
 
             else:
 
-                return '다시 입력해주세요.'
+                return '\'네\' 또는 \'아니오\'로 대답해 주세요.'
+
