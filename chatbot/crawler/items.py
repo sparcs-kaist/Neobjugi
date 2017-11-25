@@ -7,7 +7,8 @@
 
 import scrapy
 
-
+# Each crawled Ara article is saved as an AraArticle object. After crawling, each crawled article is dumped into a json file in the form
+# of a dictionary with keys 'board', 'article_id', 'article_url', 'title', 'time' and 'content'.
 class AraArticle(scrapy.Item):
     board = scrapy.Field()
     article_id = scrapy.Field()
