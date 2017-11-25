@@ -7,7 +7,8 @@ class AraSpider(scrapy.Spider):
     start_urls = [
         "https://ara.kaist.ac.kr/",
     ]
-
+    
+    # Log into Ara. Pass the response into the redirect function (callback).
     def parse(self, response):
 
         formdata = {
@@ -21,6 +22,7 @@ class AraSpider(scrapy.Spider):
             callback=self.redirect,
         )
 
+    # Recursively crawls boards. Passes the crawled board HTML file into parse_post_link_list function (callback).
     def redirect(self, response):
         # Automatically go into search mode if keyword is not None. Else, go into recent mode.
         # modes: recent, search
@@ -48,6 +50,7 @@ class AraSpider(scrapy.Spider):
                     meta = {'board': board},
                 )
 
+    # Extracts individual article URL from crawled board HTML file and passes the article HTML into parse_post function (callback).
     def parse_post_link_list(self, response):
         post_link_list = response.css("table.articleList tbody tr")
 
@@ -59,6 +62,8 @@ class AraSpider(scrapy.Spider):
                 meta = {'board': response.meta.get('board')},
             )
 
+    # Parses the article and extracts article id, article url, title, uploaded time and content. The yielded AraArticle Item is saved in
+    # a json file.
     def parse_post(self, response):
         article_id = int(response.css("div.articleTitle a::attr(id)").extract_first().strip())
         article_url = response.url
