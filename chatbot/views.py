@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 import pprint
 import json
-from chatbot.schedule import scheduler
+from chatbot.schedule import Schedule
 from chatbot.ara import AraChatbot
 import chatbot.credentials as credit 
 from chatbot.bus import bus
@@ -24,6 +24,7 @@ class ChatView(APIView):
     def __init__(self):
         self.ara_session = Session()
         self.counter = 0
+        self.schedule = Schedule()
     def get(self, request, format=None):
         if request.GET['hub.verify_token'] == '01020304':
             return Response(int(request.GET['hub.challenge']))
@@ -84,7 +85,7 @@ class ChatView(APIView):
         if msg == "":
             try:
                 if '언제' in received_message: 
-                    msg += scheduler(received_message)
+                    msg += schedule.scheduler(received_message)
             except:
                 print("error during applying scheduler function")
         print(msg)
